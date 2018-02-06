@@ -1,0 +1,27 @@
+<% include partials/header.ejs %>
+
+<div class="container">
+    <div class="jumbotron">
+        <h1>Welcome to The Bibliophile</h1>
+        <p>View the collection of books and their reviews from our community!</p>
+        <p>
+            <a href="/books/new" class="btn btn-primary btn-lg">Add new book</a>
+        </p>
+    </div>
+    
+    <div class="row text-center"  style="display: flex; flex-wrap: wrap;">
+        <% books.forEach(function(book){ %>
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnail">
+                    <img src="<%= book.image %>">
+                    <div class="caption">
+                        <h4><%= book.name %></h4>
+                    </div>
+                </div>    
+            </div>
+        <% }); %>        
+    </div>
+    
+</div>
+
+<% include partials/footer.ejs %>

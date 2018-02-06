@@ -1,0 +1,14 @@
+<% include partials/header.ejs %>
+
+<h1>Create a new book</h1>
+
+<a href="/books">See the current books</a>
+
+<form action="/books" method="POST">
+    <input type="text" name="name" placeholder="name">
+    <input type="text" name="image" placeholder="image url">
+    
+    <button>Submit!</button>
+</form>
+
+<% include partials/footer.ejs %>
