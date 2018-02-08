@@ -1,14 +1,24 @@
 <% include partials/header.ejs %>
 
-<h1>Create a new book</h1>
+<div class="container">
+    <h1 style="text-align: center;">Create a new book</h1>
 
-<a href="/books">See the current books</a>
-
-<form action="/books" method="POST">
-    <input type="text" name="name" placeholder="name">
-    <input type="text" name="image" placeholder="image url">
+    <div style="width: 30%; margin: 25px auto;">
+        <form action="/books" method="POST">
+            <div class="form-group">           
+                <input class="form-control" type="text" name="name" placeholder="name">
+            </div>
+            <div class="form-group">            
+                <input class="form-control" type="text" name="image" placeholder="image url">
+            </div>
+            <div class="form-group">            
+                <button class="btn btn-lg btn-default btn-block">Submit!</button>
+            </div>
+            <a href="/books">See the current books</a>
+        </form>
+    </div>
     
-    <button>Submit!</button>
-</form>
+  
+</div>
 
 <% include partials/footer.ejs %>
