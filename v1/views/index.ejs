@@ -13,10 +13,13 @@
         <% books.forEach(function(book){ %>
             <div class="col-md-3 col-sm-6">
                 <div class="thumbnail">
-                    <img src="<%= book.image %>">
+                    <img src="<%= book.bookImage %>">
                     <div class="caption">
-                        <h4><%= book.name %></h4>
+                        <h4><%= book.bookName %></h4>
                     </div>
+                    <p>
+                        <a href="/books/<%= book._id %>" class="btn btn-primary">More Info</a>
+                    </p>
                 </div>    
             </div>
         <% }); %>        
